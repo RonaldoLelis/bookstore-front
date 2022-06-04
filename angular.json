@@ -54,6 +54,7 @@
               "src/assets"
             ],
             "styles": [
+              "./node_modules/@angular/material/prebuilt-themes/indigo-pink.css",
               "src/styles.css"
             ],
             "scripts": []
@@ -108,5 +109,8 @@
       }
     }
   },
-  "defaultProject": "bookstore-front"
+  "defaultProject": "bookstore-front",
+  "cli": {
+    "analytics": "b833e352-6b3d-442d-8da1-39c7e57bbc1c"
+  }
 }
