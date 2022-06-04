@@ -1,0 +1,7 @@
+.book-footer {
+    bottom: 0;
+    position: fixed;
+    font-size: 14px;
+    height: 5%;
+    justify-content: flex-end;
+}
