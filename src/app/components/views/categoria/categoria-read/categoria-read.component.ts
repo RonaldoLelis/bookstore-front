@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MatTableDataSource } from '@angular/material/table';
+import { Router } from '@angular/router';
 import { CategoriaService } from '../categoria.service';
 import { Categoria } from '../models/categoria.model';
 
@@ -11,9 +12,11 @@ import { Categoria } from '../models/categoria.model';
 export class CategoriaReadComponent implements OnInit {
 
   categorias: Categoria[] = [];
-  displayedColumns: string[] = ['id', 'nome', 'descricao', 'acoes'];
+  displayedColumns: string[] = ['id', 'nome', 'descricao', 'livros', 'acoes'];
 
-  constructor(private service: CategoriaService) { }
+  constructor(
+    private service: CategoriaService,
+    private router: Router) { }
 
   ngOnInit(): void {
     this.findAllCategories();
@@ -23,6 +26,10 @@ export class CategoriaReadComponent implements OnInit {
     this.service.findAll().subscribe(result => {
       this.categorias = result;
     });
+  }
+
+  openCreateCategory() {
+    this.router.navigate(["categorias/create"]);
   }
 
 }
