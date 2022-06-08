@@ -1,0 +1,23 @@
+.categoria-content {
+    width: 90%;
+    margin: 20px auto;
+}
+
+.categoria-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.categoria-title h1 {
+    font-size: 28px;
+    color: dimgray;
+    font-weight: 500;
+}
+
+.categoria-table-body {
+
+}
+
+.categoria-table {
+    width: 100%;
+}
