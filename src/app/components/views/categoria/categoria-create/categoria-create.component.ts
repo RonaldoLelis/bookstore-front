@@ -22,15 +22,19 @@ export class CategoriaCreateComponent implements OnInit {
 
   ngOnInit(): void { }
 
-    createCategory(): void {
-      this.service.createCategory(this.categoria).subscribe((response) => {
-        this.service.message('Categoria criada com sucesso!');
-        this.router.navigate(['categorias']);
-      }, failure => {
-        for(let err = 0; err < failure.error.errors.length; err++) {
-          this.service.message(failure.error.errors[err].message);          
-        }
-      }); 
-    }
+  createCategory(): void {
+    this.service.createCategory(this.categoria).subscribe((response) => {
+      this.service.message('Categoria criada com sucesso!');
+      this.router.navigate(['categorias']);
+    }, failure => {
+      for(let err = 0; err < failure.error.errors.length; err++) {
+        this.service.message(failure.error.errors[err].message);          
+      }
+    }); 
+  }
+
+  cancel(): void {
+    this.router.navigate(['categorias']);
+  }
 
 }
