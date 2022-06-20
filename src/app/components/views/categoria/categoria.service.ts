@@ -29,6 +29,11 @@ export class CategoriaService {
     return this.httpClient.post<Categoria>(url, categoria);
   }
 
+  editCategory(categoria: Categoria): Observable<void> {
+    const url = `${this.baseUrl}/categorias/${categoria.id}`
+    return this.httpClient.put<void>(url, categoria);
+  }
+
   deleteCategory(id: string): Observable<void> {
     const url = `${this.baseUrl}/categorias/${id}`;
     return this.httpClient.delete<void>(url);

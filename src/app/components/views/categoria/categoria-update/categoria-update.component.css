@@ -13,7 +13,10 @@
 .buttons-group {
     display: flex;
 }
-.button-create {
+.button-update {
     margin-right: 10px;
     color: rgb(14, 153, 9);
+}
+.button-cancel {
+    color: rgb(27, 100, 236);
 }

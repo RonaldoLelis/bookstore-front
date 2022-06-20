@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -24,6 +24,9 @@ import { HomeComponent } from './components/views/home/home.component';
 import { CategoriaReadComponent } from './components/views/categoria/categoria-read/categoria-read.component';
 import { CategoriaCreateComponent } from './components/views/categoria/categoria-create/categoria-create.component';
 import { CategoriaDeleteComponent } from './components/views/categoria/categoria-delete/categoria-delete.component';
+import { CategoriaUpdateComponent } from './components/views/categoria/categoria-update/categoria-update.component';
+import { BookReadAllComponent } from './components/views/livro/book-read-all/book-read-all.component';
+import { LivroCreateComponent } from './components/views/livro/livro-create/livro-create.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +37,10 @@ import { CategoriaDeleteComponent } from './components/views/categoria/categoria
     HomeComponent,
     CategoriaReadComponent,
     CategoriaCreateComponent,
-    CategoriaDeleteComponent
+    CategoriaDeleteComponent,
+    CategoriaUpdateComponent,
+    BookReadAllComponent,
+    LivroCreateComponent
   ],
   imports: [
     BrowserModule,
@@ -50,6 +56,7 @@ import { CategoriaDeleteComponent } from './components/views/categoria/categoria
     MatFormFieldModule,
     MatSnackBarModule,
     FormsModule,
+    ReactiveFormsModule,
     MatInputModule,
     HttpClientModule
   ],

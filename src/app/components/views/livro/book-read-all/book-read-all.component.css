@@ -1,0 +1,38 @@
+.livro-content {
+    width: 90%;
+    margin: 20px auto;
+}
+.livro-topo {
+    display: flex;
+}
+.button-add-new {
+    color: darkgray;
+}
+.livro-title {
+    text-align: center;
+    margin: auto;
+}
+.livro-title h1 {
+    font-size: 28px;
+    color: darkgray;
+    font-weight: 500;
+}
+.livro-table-body {
+
+}
+.livro-table {
+    width: 100%;
+}
+.menu-book {
+    color: burlywood;
+}
+.edit {
+    color: rgb(243, 191, 19);
+    margin-right: 10px;
+}
+.delete {
+    color: rgb(243, 54, 54);
+}
+.mat-header-acoes {
+    width: 80px;
+}
