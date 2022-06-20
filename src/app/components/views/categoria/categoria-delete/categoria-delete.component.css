@@ -1,0 +1,21 @@
+.form-create {
+    width: 50%;
+    display: flex;
+    margin: 20px auto;
+    text-align: center;
+    flex-direction: column;
+}
+.form-create h1 {
+    font-size: 28px;
+    color: darkgray;
+    font-weight: 500;
+}
+.buttons-group {
+    display: flex;
+}
+.button-delete {
+    margin-right: 10px;
+}
+.button-cancel {
+    color: rgb(27, 100, 236);
+}
