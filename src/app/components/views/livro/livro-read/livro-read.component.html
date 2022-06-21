@@ -1,0 +1,27 @@
+<form>
+    <mat-card class="book-read mat-elevation-z4">
+        <mat-card-title class="book-read-title">
+            Título do livro: {{ livro.titulo }}
+        </mat-card-title>
+    </mat-card>    
+
+    <mat-card class="book-read mat-elevation-z4">
+        <mat-card-subtitle class="book-read-title">
+            Autor: {{ livro.nome_autor }}
+        </mat-card-subtitle>
+        <button
+            class="book-read-button-back"
+            mat-stroked-button color="primary"
+            (click)="cancel()">
+            <mat-icon>
+                keyboard_return
+            </mat-icon>
+        </button>
+    </mat-card>
+
+    <mat-card class="book-read-content mat-elevation-z4">
+        <mat-card-title class="book-read-content-title">
+            {{ livro.texto }}
+        </mat-card-title>
+    </mat-card>
+</form>

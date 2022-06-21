@@ -1,0 +1,23 @@
+form {
+    width: 90%;
+    margin: auto;
+}
+
+.book-read {
+    margin: 20px auto;
+    text-align: center;
+}
+
+.book-read-content-title {
+    padding: 10px;
+    font-size: 15px;
+    text-align: justify;
+    font-family: 'Courier New', Courier, monospace;
+    -webkit-column-count: 2;
+    -moz-column-count: 2;
+    column-count: 3; 
+}
+
+.book-read-button-back {
+    width: 100%;
+}

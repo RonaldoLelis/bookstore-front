@@ -50,5 +50,4 @@ export class LivroDeleteComponent implements OnInit {
       this.serviceLivro.message('Falha ao deletar livro! Tente mais tarde..')
     })
   }
-
 }
