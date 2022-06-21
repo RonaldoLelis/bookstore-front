@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { CategoriaService } from '../../categoria/categoria.service';
-import { Categoria } from '../../categoria/models/categoria.model';
 import { LivroService } from '../livro.service';
 import { Livro } from '../models/livro.model';
 
@@ -18,7 +17,7 @@ export class BookReadAllComponent implements OnInit {
   displayedColumns: string[] = ['id', 'titulo', 'livros', 'acoes'];
 
   constructor(
-    private service: LivroService,
+    private serviceLivro: LivroService,
     private serviceCategoria: CategoriaService,
     private getParamId: ActivatedRoute,
     private router: Router) { }
@@ -36,7 +35,7 @@ export class BookReadAllComponent implements OnInit {
   }
 
   findAllBooks(): void {
-    this.service.findAllByCategory(this.id_cat).subscribe((response) => {
+    this.serviceLivro.findAllByCategory(this.id_cat).subscribe((response) => {
       this.livros = response;
     });
   }

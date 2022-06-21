@@ -23,19 +23,19 @@ export class LivroCreateComponent implements OnInit {
   nome_autor = new FormControl('', [Validators.minLength(5), Validators.required]);
   texto = new FormControl('', [Validators.minLength(10), Validators.required]);
 
-  constructor(private service: LivroService, private router: Router, private getParamId: ActivatedRoute) { }
+  constructor(private serviceLivro: LivroService, private router: Router, private getParamId: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.id_cat = this.getParamId.snapshot.paramMap.get('id_cat')!;
   }
 
   createBook(): void {
-    this.service.createBook(this.livro, this.id_cat).subscribe((response) => {
+    this.serviceLivro.createBook(this.livro, this.id_cat).subscribe((response) => {
       this.router.navigate([`categorias/${this.id_cat}/livros`]);
-      this.service.message('Livro criado com sucesso!');
+      this.serviceLivro.message('Livro criado com sucesso!');
     }, failure => {
       for(let err = 0; err < failure.error.errors.length; err++) {
-        this.service.message(failure.error.errors[err].message);          
+        this.serviceLivro.message(failure.error.errors[err].message);          
       }
     }); 
   }

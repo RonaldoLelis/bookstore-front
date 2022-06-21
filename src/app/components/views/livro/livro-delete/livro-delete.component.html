@@ -1,0 +1,32 @@
+<form class="form-create">
+    <h1>Excluir Livro</h1>
+    <mat-form-field class="form">
+        <mat-label>Título:</mat-label>
+        <input matInput [(ngModel)]="livro.titulo" disabled type="text" name="titulo">
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Autor:</mat-label>
+        <input matInput [(ngModel)]="livro.nome_autor" disabled type="text" name="nome_autor">
+    </mat-form-field>
+
+    <mat-form-field class="form">
+        <mat-label>Texto:</mat-label>
+        <textarea matInput [(ngModel)]="livro.texto" disabled type="text" name="descricao"></textarea>
+    </mat-form-field>
+
+    <div class="buttons-group">
+        <button
+            class="button-delete mat-elevation-z4"
+            mat-stroked-button color="warn"
+            (click)="deleteBook()">
+            EXCLUIR
+        </button>
+        <button
+            class="button-cancel mat-elevation-z4"
+            mat-stroked-button color="warn"
+            (click)="cancel()">
+            CANCELAR
+        </button>
+    </div>
+</form>
